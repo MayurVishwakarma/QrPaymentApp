@@ -18,11 +18,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               'Welcome Back!',
@@ -48,11 +48,13 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 20),
             DropdownButtonFormField<String>(
               value: _selectedRole,
-              items: _roles
-                  .map(
-                    (role) => DropdownMenuItem(value: role, child: Text(role)),
-                  )
-                  .toList(),
+              items:
+                  _roles
+                      .map(
+                        (role) =>
+                            DropdownMenuItem(value: role, child: Text(role)),
+                      )
+                      .toList(),
               onChanged: (value) => setState(() => _selectedRole = value!),
               decoration: const InputDecoration(
                 labelText: 'Select Role',
