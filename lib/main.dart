@@ -1,6 +1,7 @@
 // Entry point: main.dart
 import 'package:flutter/material.dart';
 import 'package:qrpayment/Core/Utils/ThemeManager.dart';
+import 'package:qrpayment/Screens/Consumer/CustomerPage.dart';
 import 'package:qrpayment/Screens/IntroScreen.dart';
 import 'package:qrpayment/Screens/LoginScreen.dart';
 
@@ -10,7 +11,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeManager.darkTheme,
       themeMode: ThemeMode.system,
       home: const IntroScreen(),
-      routes: {'/login': (context) => const LoginScreen()},
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/customer': (context) => const CustomerScreen(),
+      },
     );
   }
 }
