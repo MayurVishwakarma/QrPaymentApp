@@ -1,4 +1,4 @@
-// lib/screens/auth/login_screen.dart
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
